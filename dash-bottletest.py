@@ -1,7 +1,8 @@
+import sendText
 from bottle import route, run, template
 
 @route('/hello')
 def index():
-    print("worked")
+    sendText
 
 run(host='localhost', port=8080)
