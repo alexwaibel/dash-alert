@@ -15,5 +15,6 @@ def sendMessage(sendToNumber):
     print(message.sid)
 
 
-for number in phoneNumbers:
-    sendMessage(phoneNumbers[number])
+def sendItOutPlz():
+    for number in phoneNumbers:
+        sendMessage(number)

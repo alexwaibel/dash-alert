@@ -3,7 +3,7 @@ from bottle import route, run, template, request
 number = "0"
 @route('/hello')
 def index():
-    sendText
+    sendText.sendItOutPlz()
 
 @route('/number')
 def index():
