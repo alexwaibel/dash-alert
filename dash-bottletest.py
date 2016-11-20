@@ -2,10 +2,13 @@ import sendText
 from bottle import route, run, template, request
 number=""
 message=""
-@route('/')
-def index():
-	indexStr = open("webpage/index.html","r").read()
-	return template(indexStr)
+@get('/<filename:re:.*\.js>')
+def javascripts(filename):
+    return static_file(filename, root='webpage/js')
+
+@get('/<filename:re:.*\.css>')
+def stylesheets(filename):
+    return static_file(filename, root='webpage/css')
 
 @route('/add',method='POST')
 def index():
