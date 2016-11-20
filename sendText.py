@@ -16,4 +16,4 @@ def sendMessage(sendToNumber):
 
 
 for number in phoneNumbers:
-    sendMessage(phoneNumbers[number])
+    sendMessage(number)
