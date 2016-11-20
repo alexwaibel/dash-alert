@@ -29,13 +29,13 @@
 
     <div class="container">
 
-      <form class="form-signin">
+      <form class="form-signin" action="/add" method="post">
         <h2 class="form-signin-heading">Dash Alert Configuration</h2>
         <div id="dynamicInput">
           <label for="inputPhoneNumber" class="sr-only">Phone Number</label>
-          <input type="tel" id="inputPhoneNumbeer" class="form-control" placeholder="Phone Number" required autofocus>
+          <input type="tel" id="inputPhoneNumber" class="form-control" placeholder="Phone Number" required autofocus name="number">
           <label for="inputMessage" class="sr-only">Message</label>
-          <input type="text" id="inputMessage" class="form-control" placeholder="Message" required>
+          <input type="text" id="inputMessage" name="message" class="form-control" placeholder="Message required">
           <button class="btn btn-default" type="button">+</button>
         </div>
         <br>
