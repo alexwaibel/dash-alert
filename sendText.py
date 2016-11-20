@@ -7,14 +7,14 @@ auth_token  = "5b419b26f9c7847bcbf314db7b2287b3"  # Your Auth Token from www.twi
 
 client = TwilioRestClient(account_sid, auth_token)
 
-def sendMessage(sendToNumber):
-    message = client.messages.create(body="EMERGENCY!! Help me.",
+def sendMessage(sendToNumber,message):
+    message = client.messages.create(body=message,
         to=sendToNumber,       # Replace with your phone number
         from_="+16789168208")  # Replace with your Twilio number
 
     print(message.sid)
 
 
-def sendItOutPlz():
-    for number in phoneNumbers:
-        sendMessage(number)
+def sendItOutPlz(number,message):
+   # for number in phoneNumbers:
+    sendMessage(number,message)
